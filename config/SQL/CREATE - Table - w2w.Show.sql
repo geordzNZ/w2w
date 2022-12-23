@@ -29,6 +29,9 @@ CREATE TABLE [w2w].[Show](
 	[Continue] BIT NOT NULL,
 	[UptoSeason] INT NULL,
 	[UptoEpisode] INT NULL,
+	[Notes] VARCHAR(1000) NULL,
+	[CurrentlyWatching] BIT NOT NULL,
+	[WatchNext] BIT NOT NULL,
 	[CreatedDateTime] DATETIME NOT NULL,
   [UpdatedDateTime] DATETIME NULL
 ) ON [PRIMARY]
@@ -46,4 +49,13 @@ GO
 ALTER TABLE [w2w].[Show]
   ADD CONSTRAINT [DF_w2wShow_EOL_SetTo0]  
   DEFAULT (0) FOR [EOL]
+GO
+
+ALTER TABLE [w2w].[Show]
+  ADD CONSTRAINT [DF_w2wShow_CurrentlyWatching_SetTo0]  
+  DEFAULT (0) FOR [CurrentlyWatching]
+GO
+ALTER TABLE [w2w].[Show]
+  ADD CONSTRAINT [DF_w2wShow_WatchNext_SetTo0]  
+  DEFAULT (0) FOR [WatchNext]
 GO
