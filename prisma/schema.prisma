@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model Lookup {
+  LookupID        Int       @id(map: "PK__Lookup__6D8B9C6BF8EBC2C9") @default(autoincrement())
+  TableName       String    @db.VarChar(100)
+  FieldName       String    @db.VarChar(100)
+  LookupEntry     String    @db.VarChar(100)
+  LookupValue     String    @db.VarChar(100)
+  LookupOrder     Int
+  CreatedDateTime DateTime  @default(now(), map: "DF_w2wLookup_CreatedDateTime_SetToCurrentDateTime") @db.DateTime
+  UpdatedDateTime DateTime? @db.DateTime
+}
+
+model Show {
+  ShowID          Int       @id(map: "PK__Show__6DE3E0D22E17BB2C") @default(autoincrement())
+  ShowName        String    @db.VarChar(100)
+  ShowAKA         String?   @db.VarChar(100)
+  ShowType        String    @db.VarChar(5)
+  Seasons         Int?
+  Genre           String    @db.VarChar(100)
+  Provider        String    @db.VarChar(25)
+  EOL             Boolean   @default(false, map: "DF_w2wShow_EOL_SetTo0")
+  Continue        Boolean
+  UptoSeason      Int?
+  UptoEpisode     Int?
+  CreatedDateTime DateTime  @default(now(), map: "DF_w2wShow_CreatedDateTime_SetToCurrentDateTime") @db.DateTime
+  UpdatedDateTime DateTime? @db.DateTime
+}
