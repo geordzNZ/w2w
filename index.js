@@ -23,8 +23,11 @@ async function main() {
 
     await prisma.lookup.deleteMany({
         where: {
-            LookupEntry: {
-                contains: 'DVD/BluRay',
+            // LookupEntry: {
+            //     contains: 'DVD/BluRay',
+            // }
+            LookupID: {
+                gt: 10
             }
         }
     })
