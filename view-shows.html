@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="coffee">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.46.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+  
+    <title>w2w - Shows</title>
+</head>
+<body>
+    <div class="page-area">
+        <div class="left-nav">
+            <a class="btn btn-ghost text-2xl" href="./index.html"> WHAT 2 WATCH</a>
+            <div class="views">
+                <div class="divider mb-1">Views</div>
+                <a class="btn btn-sm btn-outline" href="./view-all.html">All </a>
+                <a class="btn btn-sm btn-outline" href="./view-movies.html">Movies</a>
+                <div class="btn btn-sm btn-outline glass" href="./view-shows.html">TV Shows</div>
+                <div class="divider mt-10 mb-1">Actions</div>
+                <a class="btn btn-sm btn-outline" href="./add-entry.html">Add New</a>
+                <a class="btn btn-sm btn-outline" href="./choose-random.html">Choose Random</a>
+                <div class="divider mt-10 mb-1">Maintenance</div>
+                <a class="btn btn-sm btn-outline" href="./lookups.html">Lookups</a>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h1 class="text-6xl mt-5 mb-10 text-center">All Shows</h1>
+
+            <div class="overflow-x-auto">
+                <table class="table table-zebra w-full">
+                <!-- head -->
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Name(aka)</th>
+                            <th>Details</th>
+                            <th>Provider</th>
+                            <th>Continue</th>
+                            <th>Rewatch</th>
+                            <th>EOL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>1</th>
+                            <td>S</td>
+                            <td>Stargate</td>
+                            <td>
+                                <div>aka - SG1</div>
+                                <div>10 seasons</div>
+                                <div>genre(badge)</div>
+                            </td>
+                            <td>Gateworld or Amazon</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                        <tr>
+                            <th>2</th>
+                            <td>S</td>
+                            <td>Jack Reacher</td>
+                            <td>
+                                <div>aka - ??</div>
+                                <div>2 seasons</div>
+                                <div>genre(badge)</div>
+                            </td>
+                            <td>Amazon</td>
+                            <td>Yes</td>
+                            <td>No</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <th>3</th>
+                            <td>S</td>
+                            <td>Stargate</td>
+                            <td>
+                                <div>aka - SG1</div>
+                                <div>10 seasons</div>
+                                <div>genre(badge)</div>
+                            </td>
+                            <td>Gateworld ot Amazon</td>
+                            <td>No</td>
+                            <td>Yes</td>
+                            <td>Yes</td>
+                        </tr>
+                    </tbody>
+                </table>
+              </div>
+        </div>
+    </div> 
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
