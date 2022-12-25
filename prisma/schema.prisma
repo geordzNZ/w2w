@@ -18,21 +18,21 @@ model Lookup {
   UpdatedDateTime DateTime? @db.DateTime
 }
 
-model Show {
-  ShowID            Int       @id(map: "PK__Show__6DE3E0D238CBD1C1") @default(autoincrement())
-  ShowName          String    @db.VarChar(100)
-  ShowAKA           String?   @db.VarChar(100)
-  ShowType          String    @db.VarChar(5)
+model Content {
+  ContentID         Int       @id(map: "PK__Content__2907A87E3CDA8BF0") @default(autoincrement())
+  ContentName       String    @db.VarChar(100)
+  ContentAKA        String?   @db.VarChar(100)
+  ContentType       String    @db.VarChar(5)
   Seasons           Int?
   Genre             String    @db.VarChar(100)
   Provider          String    @db.VarChar(25)
-  EOL               Boolean   @default(false, map: "DF_w2wShow_EOL_SetTo0")
+  EOL               Boolean   @default(false, map: "DF_w2wContent_EOL_SetTo0")
   Continue          Boolean
   UptoSeason        Int?
   UptoEpisode       Int?
   Notes             String?   @db.VarChar(1000)
-  CurrentlyWatching Boolean   @default(false, map: "DF_w2wShow_CurrentlyWatching_SetTo0")
-  WatchNext         Boolean   @default(false, map: "DF_w2wShow_WatchNext_SetTo0")
-  CreatedDateTime   DateTime  @default(now(), map: "DF_w2wShow_CreatedDateTime_SetToCurrentDateTime") @db.DateTime
+  CurrentlyWatching Boolean   @default(false, map: "DF_w2wContent_CurrentlyWatching_SetTo0")
+  WatchNext         Boolean   @default(false, map: "DF_w2wContent_WatchNext_SetTo0")
+  CreatedDateTime   DateTime  @default(now(), map: "DF_w2wContent_CreatedDateTime_SetToCurrentDateTime") @db.DateTime
   UpdatedDateTime   DateTime? @db.DateTime
 }
