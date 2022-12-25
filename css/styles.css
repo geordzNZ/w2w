@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.page-area {
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+}
+.left-nav {
+    padding: 1em;
+    justify-content: center;
+}
+
+.views {
+    display: grid;
+    gap: 1em;
+}
+
+.main-content {
+    overflow: hidden;
+}
