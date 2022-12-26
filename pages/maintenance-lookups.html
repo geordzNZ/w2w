@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="coffee">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.46.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../css/styles.css">
+  
+    <title>w2w - Lookups</title>
+</head>
+<body>
+    <div class="page-area">
+        <div class="left-nav">
+            <a class="btn btn-ghost text-2xl" href="./index.html"> WHAT 2 WATCH</a>
+            <div class="views">
+                <div class="divider mb-1">Views</div>
+                <a class="btn btn-sm btn-outline" href="./view-all.html">All </a>
+                <a class="btn btn-sm btn-outline" href="./view-movies.html">Movies</a>
+                <a class="btn btn-sm btn-outline" href="./view-shows.html">TV Shows</a>
+                <div class="divider mt-10 mb-1">Actions</div>
+                <a class="btn btn-sm btn-outline" href="./add-entry.html">Add New</a>
+                <a class="btn btn-sm btn-outline" href="./choose-random.html">Choose Random</a>
+                <div class="divider mt-10 mb-1">Maintenance</div>
+                <div class="btn btn-sm btn-outline glass" href="./lookups.html">Lookups</div>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <h1 class="text-6xl mt-5 mb-10 text-center">Lookups</h1>
+
+            <div class="overflow-x-auto">
+                <table class="table table-zebra w-full">
+                <!-- head -->
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Table Name</th>
+                            <th>Field Name</th>
+                            <th>Entry</th>
+                            <th>Value</th>
+                            <th>Order</th>
+                            <th>Added</th>
+                            <th>Updated</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body-area">
+                    </tbody>
+                </table>
+              </div>
+        </div>
+    </div> 
+
+<template id="template-table-row">
+    <tr>
+        <th data-LookupID></th>
+        <td data-TableName></td>
+        <td data-FieldName></td>
+        <td data-LookupEntry></td>
+        <td data-LookupValue></td>
+        <td data-LookupOrder></td>
+        <td data-CreatedDate></td>
+        <td data-UpdatedDate></td>
+    </tr>
+</template>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="../js/maintenance-lookups.js"></script>
+</body>
+</html>
